@@ -19,20 +19,20 @@
     </head>
     <body>
         <header>
-            <h1>Travestie show en dragqueen show girl voor een perfecte travestie act</h1>
+            <h1><a href="/">Travestie show en dragqueen show girl voor een perfecte travestie act</a></h1>
         </header>
-        <div id="home" class="container">
+        <div id="home" class="container__block">
             <div class="header__block">
                 <h2>Chrystal Conners</h2>
-                <strong>A fishy drag</strong>    
+                <strong class="neon">A fishy drag</strong>
+                <p>
+                    The principal mark of a queen is not perfection but originality, like style attitude and make up
+                </p>
+                <strong>Proffesional drag show</strong>
+                <a href="/#booking" class="default__btn">Book me</a>
             </div>
-            
-            
-            <video class="bg__vid" id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-                <source src="videos/splash.mp4" type="video/mp4"> 
-                Video not supported 
-
-            </video>
+            <img class="diag__image" src="/images/diag_content.svg" alt="content"/>
+            <div class="vid__holder"></div>
         </div>
         <div id="bio">
             
@@ -52,6 +52,7 @@
         </div>
         <footer>
             <nav>
+                <a href="#menu" class="menu__btn">Menu</a>
                 <ul>
                     <li>
                         <a href="/">home</a>
@@ -69,6 +70,10 @@
             </nav>
         </footer>
 
+        <div class="sharer__block">
+            <span>share me</span>
+        </div>
+
         <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -85,10 +90,14 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/jquery.videoBG/jquery.videoBG.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/plugins.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

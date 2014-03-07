@@ -1,0 +1,221 @@
+* {
+    color: $color__b;
+    text-decoration: none;
+    @include box-sizing(border-box);
+}
+
+body, html {
+    height: 100%;
+    @include edmond;
+    background: $color__c;
+    z-index: -2;
+}
+
+header {
+    position: absolute;
+    left: 0; top: 0; z-index: 80;
+
+    h1 {
+        position: absolute; 
+        top: 110px; left: 10px;
+
+        a {
+            position: relative;
+            display: block;
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            color: $color__a;
+            &:before {
+                content: 'C'; @include icons;
+                display: block; font-size: 80px;
+            }
+        }
+    }
+}
+
+.container__block {
+    z-index: 1;
+}
+
+footer {
+    position: fixed; left: 0;
+    top: 0; width: 100px;
+    overflow: hidden;
+    z-index: 100;
+    @include transition(width 0.5s ease-in-out);
+
+    a, span {
+        display: inline-block; height: 100px;
+        line-height: 100px; text-align: center;
+        text-transform: uppercase; font-size: em(20);
+        background: $color__a;  padding: 0 20px;
+        @include transition(background 0.5s ease);
+
+        &:hover {
+            background: $color__a - 30;
+        }
+    }
+    
+    nav {
+        width:1000px; 
+    }
+    
+    .menu__btn {
+        width: 100px; padding: 0; float: left;
+    }
+    &.open {
+        width:100%;
+        .menu__btn {
+            background: $color__a - 50;
+        }
+    }
+    ul {
+        float: left;
+    }
+    li {
+        float: left;
+        a {
+            float: left;
+        }
+    }
+
+}
+
+
+.sharer__block {
+    position: fixed; height: 60px;  bottom: 0; right: 0;
+    z-index: 100; width: 140px;
+    overflow: hidden; 
+    @include transition(width 0.5s ease);
+    &.open {
+        width: 600px;
+    }
+    span, a {
+        display: inline-block; height: 80px;
+        line-height: 70px; text-align: center;
+        text-transform: uppercase; font-size: em(20);
+        background: $color__a;  padding: 0 20px;
+        @include transition(background 0.5s ease);
+        cursor: pointer;
+
+        &:hover {
+            background: $color__a - 30;
+        }
+        
+    }
+    span {
+        width: 140px; padding: 0; text-align:  center;
+        display: block; position: absolute; right: 0; top: 0;
+    }
+    ul {
+        position: absolute; right: 140px; top: 0;
+        width: 600px; text-align: right;
+        li {
+            display: inline-block; height: 80px;
+            background: $color__a;
+                
+           
+
+            &.facebook {
+                a {
+                    &:before {
+                        content: '\e600';        
+                    }
+                }
+            }
+            &.twitter {
+                a {
+                    &:before {
+                        content: '\e601';        
+                    }
+                }
+            }
+            &.linkedin {
+                a {
+                    &:before {
+                        content: '\e602';        
+                    }
+                }
+            }
+            &.pinit {
+                a {
+                    &:before {
+                        content: '\e603';        
+                    }
+                }
+            }
+            &.gplus {
+                a {
+                    &:before {
+                        content: '\e604';        
+                    }
+                }
+            }
+
+            a {
+                overflow: hidden; height: 0;
+                padding-top: 80px; position: relative;
+                width: 50px;
+                &:before {
+                    display: block; height: 80px;
+                    position: absolute; left: 0;
+                    top: 0; width: 100%; line-height: 70px!important;
+                    color: $color__b; @include icons;
+                }
+            }
+        }
+    }
+
+}
+.default__btn {
+    display: inline-block; margin: 0 auto;
+    border: solid 2px $color__a;
+    height: 80px; line-height: 80px;
+    text-transform: uppercase; padding: 0 20px;
+    color: $color__a; font-size: em(30);
+    margin-top: 20px; @include transition(all 0.3s);
+    &:before, &:after {
+        content: ' - ';
+    }
+    &:hover {
+        background: $color__a;
+        background: rgba($color__a, 0.3);
+        color: $color__b;
+        border: solid 2px $color__b;
+    }
+}
+.colors__txt {
+    @include transition(all 2s);
+    
+}
+.colors__txt_1 {
+    color: $color__d;
+    text-shadow:0 0 5px rgba($color__d, 0.6);
+}
+.colors__txt_2 {
+    color: $color__e;
+    text-shadow:0 0 5px rgba($color__e, 0.6);
+}
+.colors__txt_3 {
+    color: $color__f;
+    text-shadow:0 0 5px rgba($color__f, 0.6);
+}
+.colors__txt_4 {
+    color: $color__g;
+    text-shadow:0 0 5px rgba($color__g, 0.6);
+}
+
+.vid__holder {
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+}
+
+.bg__vid {
+    position: absolute; left: 0; top: 0;
+    width: 100%;
+    height: auto;
+    min-width:100%;
+    z-index: -1000;
+}
