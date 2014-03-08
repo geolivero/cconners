@@ -37,6 +37,22 @@
 }(jQuery));
 
 
+
+(function ($) {
+    $.fn.upscureEmail = function (options) {
+        this.each(function () {
+            var el = $(this), email = el.text();
+
+            email = email.replace(/\(a\)/, '@');
+            email = email.split('(')[0] + '.' + email.split('(')[1];
+            email = email.substring(0, email.length - 1);
+            el.wrap('<a href="mailto: ' + email + '"></a>');
+            el.text(email);
+        });
+    };
+}(jQuery));
+
+
 (function ($) {
     $.fn.socialButtons = function (options) {
         var SOCIAL, defaults;

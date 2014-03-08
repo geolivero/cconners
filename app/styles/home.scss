@@ -5,24 +5,7 @@
     height: 100%; width: 100%;
 
 
-    .diag__image {
-        @include transition(left 0.3s);
-        width: auto;
-        height: 100%;
-        min-height: 100%;
-        position: absolute; 
-        left: -2%; bottom: 0; top: 0;
-
-        @media all and (min-height: 900px) {
-            left: -10%;
-        }
-        @media all and(max-width: 1024px) {
-            left: -20%;
-        }
-        @media all and(max-width: 768px) {
-            left: -40%;
-        }
-    }
+    
 
     &:after {
         content: '';

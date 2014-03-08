@@ -1,0 +1,12 @@
+#bookings {
+    background: $color__c;
+
+    &:after {
+        content: '';
+        display: block; 
+        @include conners-sprite(contact);
+        width: 333px;
+        height: 700px;
+        position: absolute; left: 15%; top: 50%; margin-top: -(600px / 2);
+    }
+}

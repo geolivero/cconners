@@ -1,0 +1,18 @@
+#bio {
+    background-image: url(../images/show_bg.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: $color__c;
+    @include background-size(auto 70%);
+
+    &:before {
+        content: '';
+        display: block; 
+        @include conners-sprite(bio);
+        width: 350px;
+        height: 636px;
+        position: absolute; left: 10%; top: 50%; margin-top: -(500px / 2);
+    }
+
+    
+}
